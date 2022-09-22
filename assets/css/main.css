@@ -1,9 +1,19 @@
 /*common-css*/
-.container { max-width: 1200px; padding: 0 15px; width: 100%; margin: 0 auto;}
+.container { max-width: 1270px; padding: 0 15px; width: 100%; margin: 0 auto;}
 body { font-family: FFDINforPuma,-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;}
 h1,h2,h3,h4,h5 { font-family: FFDINforPuma,-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;}
 .title-block { text-align: center;}
+h2 { font-size: 32px;}
 .btn { padding: 20px; text-align: center; background-color: #000; text-transform: uppercase; color: #fff; font-weight: 600;} 
+
+/*select2-dropdown*/
+.select2-container { width: 222px !important; margin-right: 20px;}
+.select2-container--default .select2-selection--single { background-color: transparent; height: 52px;}
+.select2-container--default .select2-selection--single .select2-selection__rendered { line-height: 52px;}
+.select2-container--default .select2-selection--single .select2-selection__arrow { height: 52px; right: 10px;}
+.select2-container b { display: none;}
+.select2-container .select2-selection__arrow{ background-position: center;background-image: url('../images/down-arrow-white.svg'); background-size: 12px 20px; background-repeat: no-repeat;} 
+.select2-container--default .select2-selection--single .select2-selection__rendered { color: #fff;}
 
 /*header*/
 .header { position: fixed;top: 0;width: 100%;left: 0;right: 0;z-index: 999;transition: all .5s;-webkit-transition: all .5s;}
@@ -41,7 +51,14 @@ h1,h2,h3,h4,h5 { font-family: FFDINforPuma,-apple-system,system-ui,BlinkMacSyste
 .explore-section .explore-section-inner .explore-item { padding: 0 10px;}
 .explore-section .explore-section-inner .explore-content { display: flex; padding: 10px;}
 .explore-content h3{ font-size: 16px; padding-right: 10px;}
-.explore-section-inner .slick-next { background-image: url('../images/right-arrow.svg'); background-color: red; border-radius: 50%; content: '' !important;}
+.explore-section-inner .slick-next::before,.explore-section-inner .slick-prev::before  { content: none !important;}
+
+/*puma-cards-section*/
+.puma-cards-section .puma-cards-inner { display: flex; margin: 0 -10px;}
+.puma-cards-inner .puma-card-item { flex: 0 0 33.33%; max-width: 33.33%; padding: 0 10px;}
+.puma-cards-inner .card-content { padding: 15px; text-align: center;}
+.puma-cards-inner .card-content h4{ font-size: 24px;}
+.puma-cards-inner .card-content .btn { margin-top: 20px;}
 
 /*image-content-block*/
 .image-content-section { padding: 60px 0;}
@@ -64,9 +81,16 @@ h1,h2,h3,h4,h5 { font-family: FFDINforPuma,-apple-system,system-ui,BlinkMacSyste
 /*puma-fam-section*/
 .puma-fam-section h2, .puma-fam-section p { margin: 0 0 20px;}
 
+/*puma-headline-section*/
+.puma-headline { padding: 60px 0;}
+.puma-headline .container { max-width: 1180px;}
+.puma-headline h2 { text-transform: uppercase; }
+.puma-headline p {max-width: 960px;}
+
 /*footer*/
-.footer { background-color: #000; padding: 40px 0;}
-.footer p { color: #fff;}
+.footer { background-color: #000; }
+.footer p, .footer span { color: #fff;}
+.footer-top { padding: 40px 0; border-bottom: 1px solid#818181;}
 .footer .footer-top-inner { display: flex; }
 .footer .footer-top-inner p { position: relative;padding-bottom: 20px;}
 .footer .footer-top-inner p::after {content: ''; background: #fff; width: 100%; height: 2px;position: absolute;left: 0; right: 0; bottom: 0;}
@@ -75,4 +99,7 @@ h1,h2,h3,h4,h5 { font-family: FFDINforPuma,-apple-system,system-ui,BlinkMacSyste
 .footer .footer-top-inner .footer-links ul li { flex: 0 0 50%; max-width: 50%; padding: 0 8px 10px;}
 .footer .footer-top-inner .footer-links ul li a { color: #818181; transition: 0.3s all;}
 .footer .footer-top-inner .footer-links ul li a:hover { color: #fff;}
+.footer-bottom { padding: 40px 0; width: 70%;}
+.footer-bottom .footer-bottom-inner { display: flex; align-items: center; justify-content: space-between;}
+.footer-bottom .footer-bottom-inner span { color: #818181;}
 

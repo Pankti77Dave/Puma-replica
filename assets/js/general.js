@@ -12,6 +12,9 @@ jQuery(document).ready(function(){
         slidesToScroll: 1,
         arrows: true,
     });
+
+    //select2-dropdown
+    jQuery('.select2-dropdown').select2();
 });
 jQuery(window).resize(function(){
     PaddingTopBanner();
