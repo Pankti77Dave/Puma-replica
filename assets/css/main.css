@@ -2,6 +2,8 @@
 .container { max-width: 1200px; padding: 0 15px; width: 100%; margin: 0 auto;}
 body { font-family: FFDINforPuma,-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;}
 h1,h2,h3,h4,h5 { font-family: FFDINforPuma,-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;}
+.title-block { text-align: center;}
+.btn { padding: 20px; text-align: center; background-color: #000; text-transform: uppercase; color: #fff; font-weight: 600;} 
 
 /*header*/
 .header { position: fixed;top: 0;width: 100%;left: 0;right: 0;z-index: 999;transition: all .5s;-webkit-transition: all .5s;}
@@ -30,7 +32,6 @@ h1,h2,h3,h4,h5 { font-family: FFDINforPuma,-apple-system,system-ui,BlinkMacSyste
 .banner-section .container { position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%);}
 .banner-section .banner-content { max-width: 470px; width: 100%; margin-left: auto; text-align: right;}
 .banner-content .btn-wrapper { margin-top: 20px;} 
-.banner-content .btn { padding: 20px; text-align: center; background-color: #000; text-transform: uppercase; color: #fff; font-weight: 600;} 
 .banner-content .btn + .btn { margin-left: 20px;}
 
 /*explore-section*/
@@ -44,11 +45,24 @@ h1,h2,h3,h4,h5 { font-family: FFDINforPuma,-apple-system,system-ui,BlinkMacSyste
 
 /*image-content-block*/
 .image-content-section { padding: 60px 0;}
-.image-content-section .image-content-inner { display: flex;}
+.image-content-section .image-content-inner { display: flex; background-color: #f4ebdc;}
+.image-content-inner .image-block img { width: 100%;}
+.image-content-section .btn-wrapper { margin-top: 30px;}
 .image-content-inner .image-block, .image-content-inner .content-block { flex: 0 0 50%; max-width: 50%;}
+.image-content-inner .content-block p { font-size: 20px;}
 
-/*image-content-block*/
+/*image-content-block-blue-bg*/
+.image-content-section.blue-bg .image-content-inner {background-color: #1ea2a3;}
 .image-content-section.blue-bg .image-block { order: 2;}
+.image-content-inner h4 { font-size: 56px; margin: 0 0 30px;}
+.image-content-inner .content-block {align-self: center; text-align: center;}
+
+/*image-conent-section-pink-bg*/
+.image-content-section.pink-bg .image-content-inner { background-color: #e29da0;}
+.image-content-section.pink-bg .btn { margin-top: 30px;}
+
+/*puma-fam-section*/
+.puma-fam-section h2, .puma-fam-section p { margin: 0 0 20px;}
 
 /*footer*/
 .footer { background-color: #000; padding: 40px 0;}
