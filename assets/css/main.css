@@ -5,6 +5,7 @@ h1,h2,h3,h4,h5 { font-family: FFDINforPuma,-apple-system,system-ui,BlinkMacSyste
 .title-block { text-align: center;}
 h2 { font-size: 32px;}
 .btn { padding: 20px; text-align: center; background-color: #000; text-transform: uppercase; color: #fff; font-weight: 600;} 
+.btn.white-btn { background-color: #fff; color: #000;}
 
 /*select2-dropdown*/
 .select2-container { width: 222px !important; margin-right: 20px;}
@@ -61,12 +62,16 @@ h2 { font-size: 32px;}
 .puma-cards-inner .card-content .btn { margin-top: 20px;}
 
 /*image-content-block*/
-.image-content-section { padding: 60px 0;}
+.image-content-section { padding: 10px 0;}
 .image-content-section .image-content-inner { display: flex; background-color: #f4ebdc;}
 .image-content-inner .image-block img { width: 100%;}
 .image-content-section .btn-wrapper { margin-top: 30px;}
 .image-content-inner .image-block, .image-content-inner .content-block { flex: 0 0 50%; max-width: 50%;}
 .image-content-inner .content-block p { font-size: 20px;}
+
+/*image-content-block-black-bg*/
+.image-content-section.black-bg .image-content-inner { background-color: #000;}
+.image-content-section.black-bg h4 { color: #fff;}
 
 /*image-content-block-blue-bg*/
 .image-content-section.blue-bg .image-content-inner {background-color: #1ea2a3;}
@@ -99,7 +104,8 @@ h2 { font-size: 32px;}
 .footer .footer-top-inner .footer-links ul li { flex: 0 0 50%; max-width: 50%; padding: 0 8px 10px;}
 .footer .footer-top-inner .footer-links ul li a { color: #818181; transition: 0.3s all;}
 .footer .footer-top-inner .footer-links ul li a:hover { color: #fff;}
-.footer-bottom { padding: 40px 0; width: 70%;}
-.footer-bottom .footer-bottom-inner { display: flex; align-items: center; justify-content: space-between;}
+.footer-bottom { padding: 40px 0;}
+.footer-bottom .footer-bottom-inner, .footer-bottom .footer-inner-left { display: flex; align-items: center; justify-content: space-between;}
 .footer-bottom .footer-bottom-inner span { color: #818181;}
-
+.footer-bottom .footer-inner-left { flex: 0 0 70%; max-width: 70%; }
+.footer-bottom .footer-inner-right { flex:  0 0 30%; max-width: 30%;}
