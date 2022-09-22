@@ -25,9 +25,9 @@ h1,h2,h3,h4,h5 { font-family: FFDINforPuma,-apple-system,system-ui,BlinkMacSyste
 .header .header-bottom .header-bottom-inner .search-wrapper input { background-color: transparent; outline: 0; border: 1px solid #fff; border-radius: 4px; padding: 15px 15px 15px 40px; background-image: url('../images/search.svg'); background-repeat: no-repeat; background-position: 12px center; background-size: 16px; color: #fff;}
 
 /*banner-section*/
-.banner-section {padding: 40% 0 4%;position: relative;min-height: 385px;}
-.banner-section img{    position: absolute; left: 0; right: 0; top: 130px; bottom: 0; background-repeat: no-repeat; background-size: cover; background-position: center; z-index: -1;}
-.banner-section .container { position: absolute; left: 0; right: 0; top: 60%; transform: translateY(-50%);}
+.banner-section {padding: 0 0 4%;position: relative;min-height: 385px;}
+/* .banner-section img{    position: absolute; left: 0; right: 0; top: 130px; bottom: 0; background-repeat: no-repeat; background-size: cover; background-position: center; z-index: -1;} */
+.banner-section .container { position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%);}
 .banner-section .banner-content { max-width: 470px; width: 100%; margin-left: auto; text-align: right;}
 .banner-content .btn-wrapper { margin-top: 20px;} 
 .banner-content .btn { padding: 20px; text-align: center; background-color: #000; text-transform: uppercase; color: #fff; font-weight: 600;} 
@@ -44,8 +44,8 @@ h1,h2,h3,h4,h5 { font-family: FFDINforPuma,-apple-system,system-ui,BlinkMacSyste
 
 /*image-content-block*/
 .image-content-section { padding: 60px 0;}
-.image-content-section .image-content-inner { display: flex; margin: 0 -10px;}
-.image-content-inner .image-block, .image-content-inner .content-block { flex: 0 0 50%; max-width: 50%; padding: 0 10px;}
+.image-content-section .image-content-inner { display: flex;}
+.image-content-inner .image-block, .image-content-inner .content-block { flex: 0 0 50%; max-width: 50%;}
 
 /*image-content-block*/
 .image-content-section.blue-bg .image-block { order: 2;}
