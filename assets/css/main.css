@@ -4,8 +4,10 @@ body { font-family: FFDINforPuma,-apple-system,system-ui,BlinkMacSystemFont,Sego
 h1,h2,h3,h4,h5 { font-family: FFDINforPuma,-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;}
 .title-block { text-align: center;}
 h2 { font-size: 32px;}
-.btn { padding: 20px; text-align: center; background-color: #000; text-transform: uppercase; color: #fff; font-weight: 600;} 
+.btn { padding: 20px; text-align: center; background-color: #000; text-transform: uppercase; color: #fff; font-weight: 600; transition: 0.3s all;} 
+.btn:hover { opacity: 0.8; color: #fff;}
 .btn.white-btn { background-color: #fff; color: #000;}
+.btn.white-btn:hover { opacity: 0.8;; color: #000;}
 
 /*select2-dropdown*/
 .select2-container { width: 222px !important; margin-right: 20px;}
@@ -16,8 +18,14 @@ h2 { font-size: 32px;}
 .select2-container .select2-selection__arrow{ background-position: center;background-image: url('../images/down-arrow-white.svg'); background-size: 12px 20px; background-repeat: no-repeat;} 
 .select2-container--default .select2-selection--single .select2-selection__rendered { color: #fff;}
 
+/*hamburger*/
+.hamburger, .hamburger span { display: block; cursor: pointer;  transition: 0.3s all;}
+.hamburger span { background-color: #fff; width: 20px; height: 2px; margin: 3px 0;}
+
 /*header*/
 .header { position: fixed;top: 0;width: 100%;left: 0;right: 0;z-index: 999;transition: all .5s;-webkit-transition: all .5s;}
+.header a { transition: 0.3s all;}
+.header a:hover { opacity: 0.5;}
 
 /*header-top*/
 .header .header-top { padding: 12px 0; background-color: #ae946d;}
@@ -27,7 +35,7 @@ h2 { font-size: 32px;}
 /*header-bottom*/
 .header .header-bottom { background-color: #000; padding: 12px 0;}
 .header .header-bottom .header-bottom-inner, .header .social-links-wrapper { display: flex; align-items: center; justify-content: space-between;}
-.header .header-bottom .logo-wrapper {width: 60px; height: auto; margin-right: 30px;}
+.header .header-bottom .logo-wrapper {width: 60px; height: auto; margin-right: 30px; cursor: pointer;}
 .social-links-wrapper .social-links { display: flex; align-items: center;}
 .social-links-wrapper .social-links li{ margin: 0 20px 0 0 ;}
 .social-links-wrapper .social-links a { padding: 10px 0; color: #fff; font-size: 16px; transition: 0.3s all; font-family: FFDINforPuma,-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;}
@@ -107,17 +115,52 @@ h2 { font-size: 32px;}
 .footer-bottom { padding: 40px 0;}
 .footer-bottom .footer-bottom-inner, .footer-bottom .footer-inner-left { display: flex; align-items: center; justify-content: space-between;}
 .footer-bottom .footer-bottom-inner span { color: #818181;}
-.footer-bottom .footer-inner-left { flex: 0 0 70%; max-width: 70%; }
+.footer-bottom .footer-inner-left { flex: 0 0 70%; max-width: 70%;  flex-wrap: wrap;}
 .footer-bottom .footer-inner-right { flex:  0 0 30%; max-width: 30%;}
+.footer-bottom .footer-inner-left .legal-data { margin-left: 10px;}
 
-
+@media screen and (max-width: 1199px){
+    .btn { padding: 8px; font-size: 14px;}
+    .banner-content .btn + .btn {margin: 0 0 0 12px;}
+    .banner-content .btn-wrapper { margin-top: 15px; }
+    .header .header-top p { font-size: 12px;}
+    .social-links-wrapper {position: relative;}
+    .social-links-wrapper .social-links { opacity: 0; visibility: hidden; position: absolute; top: calc(100% + 12px); background-color: #fff; width: 200px; display: flex; flex-direction: column;   transition: 0.3s all; transform: translateX(-100%);}
+    .social-links-wrapper .social-links li { width: 100%; margin: 0;}
+    .social-links-wrapper .social-links a{ color:#000; display: block; padding: 12px;}
+    .header.menu-open .hamburger span:nth-child(1) {transform: translateY(5px)rotate(45deg);}
+    .header.menu-open .hamburger span:nth-child(2)  {opacity: 0;}
+    .header.menu-open .hamburger span:nth-child(3)  {transform: translateY(-5px) rotate(-45deg);}
+    .header.menu-open .social-links { opacity: 1; visibility: visible; transform: translateX(0);}
+    .header .header-bottom .header-bottom-inner .search-wrapper input { padding: 5px 5px 5px 30px; background-size: 10px; font-size: 12px;}
+    .image-content-inner h4 { font-size: 32px;}  
+}
 @media screen and (max-width: 991px) {
     .puma-cards-section .puma-cards-inner { margin: 0 0 -10px; flex-wrap: wrap;}
     .puma-cards-inner .puma-card-item { flex: 0 0 100%; max-width: 100%; padding: 0 0 10px;}
     .image-content-inner { flex-wrap: wrap;}
     .image-content-section.blue-bg .image-block {order: 1;}
-    .image-content-inner .content-block { order: 2;}
+    .image-content-inner .content-block { order: 2; padding: 30px;}
     .image-content-inner .image-block, .image-content-inner .content-block { flex: 0 0 100%; max-width: 100%;}
     .footer-top .footer-top-inner, .footer-bottom .footer-bottom-inner { flex-wrap: wrap; margin: 0 0 -20px;}
     .footer .footer-top .footer-links, .footer-bottom .footer-inner-left, .footer-bottom .footer-inner-right { flex: 0 0 100%; max-width: 100%; padding: 0 0 20px;}
+}
+@media screen and (max-width: 767px){
+    .image-content-inner h4 { font-size: 28px;}  
+    .footer-bottom .footer-inner-left .legal-data { margin: 10px 0 0; width: 100%;}
+    .social-links input { background-color: transparent; outline: 0; border: 1px solid #000; border-radius: 4px; padding: 15px 15px 15px 40px; background-image: url('../images/search.svg'); background-repeat: no-repeat; background-position: 12px center; background-size: 16px; color: #fff;}
+}
+@media screen and (max-width: 575px){
+    .header .header-bottom .logo-wrapper { width: 25px; margin-right: 15px;}
+    .banner-section { min-height: 250px;}
+    .banner-content h1 { font-size: 30px;}
+    .banner-section .container { top: 65%;}
+    .image-content-inner h4 { font-size: 24px;}  
+    .footer-bottom .footer-inner-left { flex: 0 0 100%; max-width: 100%;}
+    .footer-bottom .footer-inner-left p{ margin-top: 15px;}
+}
+@media screen and (max-width: 380px){
+    .btn + .btn { margin-top: 15px;}
+    h2 { font-size: 28px;}
+    .banner-section .btn-wrapper { display: none;}
 }

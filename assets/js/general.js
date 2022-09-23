@@ -5,6 +5,18 @@ function PaddingTopBanner(){
 }
 jQuery(document).ready(function(){
     PaddingTopBanner();
+
+    //adding li
+    if (screen.width < 767) {
+        var appendLi = jQuery('.search-wrapper input').detach();
+        jQuery('.social-links').append(appendLi);
+    }
+
+    //hamburger-menu 
+    jQuery('.hamburger').click(function(){
+        jQuery('.header').toggleClass('menu-open');
+    })
+
     //slick-slider
     jQuery('.explore-section-inner').slick({
         autoplay: true,
