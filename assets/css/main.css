@@ -19,7 +19,7 @@ h2 { font-size: 32px;}
 .select2-container--default .select2-selection--single .select2-selection__rendered { color: #fff;}
 
 /*hamburger*/
-.hamburger, .hamburger span { display: block; cursor: pointer;  transition: 0.3s all;}
+.hamburger, .hamburger span { display: none; cursor: pointer;  transition: 0.3s all;}
 .hamburger span { background-color: #fff; width: 20px; height: 2px; margin: 3px 0;}
 
 /*header*/
@@ -133,6 +133,7 @@ h2 { font-size: 32px;}
     .banner-content .btn + .btn {margin: 0 0 0 12px;}
     .banner-content .btn-wrapper { margin-top: 15px; }
     .header .header-top p { font-size: 12px;}
+    .hamburger, .hamburger span { display: block}
     .social-links-wrapper {position: relative;}
     .social-links-wrapper .social-links { opacity: 0; visibility: hidden; position: absolute; top: calc(100% + 12px); background-color: #fff; width: 200px; display: flex; flex-direction: column;   transition: 0.3s all; transform: translateX(-100%);}
     .social-links-wrapper .social-links li { width: 100%; margin: 0;}
