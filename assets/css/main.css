@@ -118,7 +118,7 @@ h2 { font-size: 32px;}
 .footer-bottom .footer-inner-left { flex: 0 0 70%; max-width: 70%;  flex-wrap: wrap;}
 .footer-bottom .footer-inner-right { flex:  0 0 30%; max-width: 30%;}
 .footer-bottom .footer-inner-left .legal-data { margin-left: 10px;}
-.footer-top .footer-links.social-media-links ul{ display: flex; }
+.footer-top .footer-links.social-media-links ul{ display: flex; margin: 30px 0 0 ;}
 .footer-top .footer-links.social-media-links ul li + li { margin-left: 25px;}
 .footer-top .footer-links.social-media-links ul a { display: inline-block; width: 24px; height: 24px;}
 .footer-top .train-col { margin-top: 120px; position: relative;}
