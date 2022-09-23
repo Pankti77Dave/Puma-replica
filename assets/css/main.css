@@ -109,3 +109,15 @@ h2 { font-size: 32px;}
 .footer-bottom .footer-bottom-inner span { color: #818181;}
 .footer-bottom .footer-inner-left { flex: 0 0 70%; max-width: 70%; }
 .footer-bottom .footer-inner-right { flex:  0 0 30%; max-width: 30%;}
+
+
+@media screen and (max-width: 991px) {
+    .puma-cards-section .puma-cards-inner { margin: 0 0 -10px; flex-wrap: wrap;}
+    .puma-cards-inner .puma-card-item { flex: 0 0 100%; max-width: 100%; padding: 0 0 10px;}
+    .image-content-inner { flex-wrap: wrap;}
+    .image-content-section.blue-bg .image-block {order: 1;}
+    .image-content-inner .content-block { order: 2;}
+    .image-content-inner .image-block, .image-content-inner .content-block { flex: 0 0 100%; max-width: 100%;}
+    .footer-top .footer-top-inner, .footer-bottom .footer-bottom-inner { flex-wrap: wrap; margin: 0 0 -20px;}
+    .footer .footer-top .footer-links, .footer-bottom .footer-inner-left, .footer-bottom .footer-inner-right { flex: 0 0 100%; max-width: 100%; padding: 0 0 20px;}
+}
